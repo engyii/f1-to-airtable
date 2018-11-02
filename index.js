@@ -1,7 +1,7 @@
 const axios = require('axios');
 const Airtable = require('airtable');
 const _ = require('lodash');
-const secret = require('secret.json');
+const secret = require('./secret.json');
 
 Airtable.configure({
     endpointUrl: 'https://api.airtable.com',
