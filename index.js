@@ -1,13 +1,14 @@
 const axios = require('axios');
 const Airtable = require('airtable');
 const _ = require('lodash');
+const secret = require('secret.json');
 
 Airtable.configure({
     endpointUrl: 'https://api.airtable.com',
-    apiKey: 'keyI5Mqk4ff9Xk3yU'
+    apiKey: secret.apiKey
 });
 
-const f1Base = Airtable.base('app2hbDSuBBByHFmh');
+const f1Base = Airtable.base(secret.db);
 
 const recordCache = {};
 const findRecord = function(table, filter) {
@@ -120,17 +121,17 @@ const importResults = async function(season) {
 async function importSeason(season) {
     //order is important
 
-    await importDrivers(season);
-    console.log('Drivers imported');
+    // await importDrivers(season);
+    // console.log('Drivers imported');
 
-    await importCircuits(season);
-    console.log('Circuits imported');
+    // await importCircuits(season);
+    // console.log('Circuits imported');
 
-    await importConstructors(season);
-    console.log('Constructors imported');
+    // await importConstructors(season);
+    // console.log('Constructors imported');
 
-    await importRaces(season);
-    console.log('Races imported');
+    // await importRaces(season);
+    // console.log('Races imported');
 
     await importResults(season);
     console.log('Results imported');

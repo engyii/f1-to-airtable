@@ -1,0 +1,25 @@
+{
+  "name": "f1-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "airtable": "^0.5.6",
+    "axios": "^0.18.0",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/engyii/f1-to-airtable.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/engyii/f1-to-airtable/issues"
+  },
+  "homepage": "https://github.com/engyii/f1-to-airtable#readme"
+}
